@@ -1,0 +1,220 @@
+@mixin img($width,$height,$objectFit){
+  width: $width;
+  height: $height;
+  object-fit: $objectFit;
+}
+@mixin displayflex($display,$flexDirection,$justifyContent,$alignItems){
+  display: $display;
+  flex-direction: $flexDirection;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+.material-icons{
+  cursor: pointer;
+  color: silver;
+}
+
+.material-icons:hover{
+  color: black;
+  
+}
+
+
+*{
+  overflow: auto;
+}
+
+.app-home-new-animation-container{
+  @include displayflex(flex,row,space-around,center);
+  margin-top: 40px;
+  background: linear-gradient(-45deg, #666564, #786E64, #91755A, #B98451, #CE853E);
+  background-size: 400% 400%;
+  animation: background-gradient 15s ease infinite;
+
+
+  .app-home-new-animation__img-parent{
+    @include img(437px,523px,cover);
+    animation: change-img-parent 6s ease-in infinite;
+  }  
+
+  .app-home-new-animation__context{
+    z-index: 5;
+    font-family: serif;
+    text-transform: uppercase;
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+    color: white;
+
+    .app-home-new-animation__title{
+      font-size: 70px;
+    }
+    .app-home-new-animation__sub-title{
+      font-size: 40px;
+    }
+
+  }
+
+  .app-home-new-animation__img-child{
+    @include img(154px,293px,cover);
+    animation: change-img-child 6s ease-in infinite;
+  }  
+}
+
+
+.app-home-new-collection-container {
+  @include displayflex(flex,row,space-around,center);
+  margin: 10px 0;
+
+  .app-home-new-collection__img{
+    @include img(400px,600px,cover);
+  }
+}
+.app-home-new-collection__context{
+  position: relative;
+  top: -85px;
+  left: -640px;
+  font-size: 70px;
+  transform: rotate(-90deg);
+  letter-spacing: 2px;
+  font-family: serif;
+  font-weight: 500;
+}
+
+
+.app-home-trend-container{
+  @include displayflex(flex,row,flex-start,center);
+  margin: 100px 0; 
+  background-color: #DEDEDE;
+
+
+  .app-home-trend-list{
+    @include displayflex(flex,row,flex-start,center);
+
+    .app-home-trend-list__item{
+      margin-right: 20px;
+    }
+    .app-home-trend-list__img{
+      @include img(300px,512px,cover);
+    }
+  }
+
+  .app-home__trend-list-context{
+    position: relative;
+    color: #2C2C2C;
+
+    .app-home__trend{
+      position: absolute;
+      top: 10px;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      font-size: 25px;
+    }
+
+    .app-home__outfits{
+      font-size: 90px;
+      letter-spacing: 2px;
+      font-family: serif;
+      font-weight: 500;
+
+    }
+  }
+
+}
+
+.app-home-shop-list{
+  @include displayflex(flex,row,center,center);
+
+  .app-home-shop-list__item{
+    margin-top: 30px;
+    margin-right: 20px;
+  }
+
+  .app-home-shop-list__img{
+    @include img(300px,500px,cover);
+  }
+
+  .app-home-shop-list__price{
+    font-family: serif;
+    text-align: left;
+  }
+}
+
+.app-home-wanted-clothing-container{
+  @include displayflex(flex,row,space-around,center);
+  margin: 35px 0;
+  background-color: #DEDEDE;
+
+
+  .app-home-wanted-list{
+    @include displayflex(flex,row,flex-start,center);
+  }
+
+  .app-home-wanted-list__item{
+    margin-right: 10px;
+  }
+
+  .app-home-wanted-list__img{
+    @include img(300px,512px,cover);
+  }
+
+  .app-home-wanted-list__context{
+    position: relative;
+    max-width: 300px;
+    margin:2px;
+    padding: 2px;    
+    font-size: 70px;
+    font-weight: 500;
+    font-family: serif;
+    text-align: right;
+    text-transform: uppercase;
+  }
+}
+
+
+
+@keyframes background-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes change-img-parent {
+  0% {
+    background-image: url(../../assets/user-images/clothing/a22.jpg);
+  }
+  50% {
+    background-image: url(../../assets/user-images/clothing/a23.jpg);
+  } 
+  100% {
+    background-image: url(../../assets/user-images/clothing/a24.jpg);
+  }  
+}
+
+@keyframes change-img-child {
+  0% {
+    background-image: url(../../assets/user-images/clothing/a22-1.jpg);
+  }
+  50% {
+    background-image: url(../../assets/user-images/clothing/a23-1.jpg);
+  } 
+  100% {
+    background-image: url(../../assets/user-images/clothing/a24-1.jpg);
+  }  
+}
+
+
+
+
+
+
+
+
+
+
+
+

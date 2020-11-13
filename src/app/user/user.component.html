@@ -1,0 +1,80 @@
+<div class="app-home">
+
+  <div class="app-home-new-animation-container">
+    <div class="app-home-new-animation__img-parent">   
+    </div>
+    <span class="app-home-new-animation__context">
+      <span class="app-home-new-animation__title">FW new
+      </span><br>
+      <span class="app-home-new-animation__sub-title">Fashion coat
+      </span><br>
+    </span>
+    <div class="app-home-new-animation__img-child">   
+    </div>
+  </div>
+
+
+  <div class="app-home-new-collection__context">New Collection</div>
+  <div class="app-home-new-collection-container">
+    <div *ngFor="let new of newCollectionList; let i = index;" class ="app-home-new-collection__item app-home-new-collection__item-{{i}}">
+      <div *ngIf="!new.wishlist">
+        <img src="{{new.src}}" class="app-home-new-collection__img">
+        <span class="material-icons" title="Add to wishlist" (click)="showWishlist()">
+          {{new.heart}}
+        </span>
+      </div>  
+    </div>
+  </div>
+
+
+
+  <div class="app-home-trend-container">
+    <div class="app-home-trend-list">
+      <div *ngFor="let trend of trendList; let i = index;" class ="app-home-trend-list__item app-home-trend-list__item-{{i}}">
+        <div *ngIf="!trend.wishlist">
+          <img src="{{trend.src}}" class="app-home-trend-list__img">
+          <span class="material-icons" title="Add to wishlist" (click)="showWishlist()">
+            {{trend.heart}}
+          </span>
+        </div>
+
+      </div>
+    </div>
+    <div class="app-home__trend-list-context">
+      <div class="app-home__trend">trend</div>
+      <div class="app-home__outfits">outfits </div>
+    </div>
+  </div>
+
+
+  <div class="app-home-shop-list">
+    <div *ngFor="let shop of shopList; let i = index;" class ="app-home-shop-list__item app-home-shop-list__item-{{i}}">
+      <div *ngIf="!shop.wishlist">
+        <img src="{{shop.src}}" class="app-home-shop-list__img">
+        <span class="material-icons" title="Add to wishlist" (click)="showWishlist()">
+            {{shop.heart}}
+        </span>
+        <div class="app-home-shop-list__price">{{shop.price}}</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="app-home-wanted-clothing-container">
+    <div class="app-home-wanted-list">
+      <div *ngFor="let wanted of wantedList; let i = index;" class ="app-home-wanted-list__item app-home-wanted-list__item-{{i}}">
+        <div *ngIf="!wanted.wishlist">
+          <img src="{{wanted.src}}" class="app-home-wanted-list__img">
+          <span class="material-icons" title="Add to wishlist" (click)="showWishlist()">
+            {{wanted.heart}}
+          </span>
+        </div>
+
+      </div>
+    </div>
+    <div class="app-home-wanted-list__context">
+      most wanted
+    </div>
+  </div>
+
+</div>

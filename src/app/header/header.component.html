@@ -1,0 +1,45 @@
+<div class="app-header">
+
+  <div class="app-header-title-container">
+  	<div><a routerLink="home" routerLinkActive="active" class="app-header-title-container__logo">Lacy's</a>
+  	</div>
+
+  	<div class="app-header__container">
+      <button mat-icon-button aria-label="Example icon button with a heart icon" *ngIf="!isUserLogIn" (click)="openDialog()">
+        <span class="material-icons">login</span>
+      </button>
+
+      <ng-container *ngIf="isUserLogIn">
+        <span class="material-icons" title="My wishlist">
+          favorite_border
+        </span>
+
+        <span class="material-icons" title="My account">
+          account_circle
+        </span>
+
+        <span class="material-icons" title="Shopping cart">
+          shopping_bag
+        </span>
+
+      </ng-container>
+
+	  </div>
+	</div>
+
+	<div class="app-header-menu-container">
+		<span>
+      <a routerLink="home" routerLinkActive="active" class="app-header-menu-container__link">Home
+      </a>
+    </span>
+		<span>
+      <a routerLink="new" routerLinkActive="active" class="app-header-menu-container__link">New
+      </a>
+    </span>
+		<span class="app-header-menu-container__link">Clothing</span>
+		<span class="app-header-menu-container__link">Shoes</span>
+		<span class="app-header-menu-container__link">Sale</span>
+	</div>
+
+
+</div>

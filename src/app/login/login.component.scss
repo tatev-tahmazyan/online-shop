@@ -1,0 +1,111 @@
+$color: orange;
+
+.app-login{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 10px 0;
+
+	.app-login__title{
+		display: block;
+		margin: 4px 0;
+		padding: 2px 0;
+		font-weight: 600;
+		font-size: 25px;
+	  font-family: Didot, serif;
+	}
+
+	.app-login__input{
+		display: block;
+		margin: 3px 0;
+		padding: 8px 0;
+		width: 100%;
+		color: $color;
+		background-color: #F0EFEF;
+		border-radius: 5px;
+		border: none;
+		text-indent: 3px;
+	}
+
+	.app-login__label:after{
+    content: "*";
+    color: $color;	
+  }
+
+  .app-login__label{
+  	display: block;
+  	margin: 2px 0;
+  	padding: 2px 0;
+  	font-size: 14px;
+  	color: #484848;
+
+  }
+
+  .app-login-button{
+  	display: block;
+  	margin: 18px 0;
+  	padding: 10px 0;
+  	width: 100%;
+  	border: none;
+  	font-weight: 900;
+  	text-transform: uppercase;
+  	letter-spacing: 2px;
+  	background-color: black;
+  	color: white;
+  	text-align: center;
+  }
+
+  .app-login-button:hover{
+  	color: $color;
+  }
+
+  .app-login__checkbox{
+  	display: inline block;
+  	padding: 2px;
+  	font-size: 12px;
+  	vertical-align: top
+  }
+
+  .app-login__other{
+  	display: block;
+  	margin: 12px 0;
+  	padding: 6px 0;
+  	font-weight: bold;
+  	font-size: 14px;
+  	text-transform: uppercase;
+  	font-variant: small-caps;
+  	letter-spacing: 1px;
+  	color: #6C6C6C;
+  	text-align: center;
+
+  }
+
+  .app-login__link-container{
+  	display: flex;
+  	justify-content: center;
+  	margin: 4px;
+  	padding: 4px;
+
+
+  	.fa {
+      padding: 18px;
+      font-size: 32px;
+      width: 32px;
+      text-decoration: none;
+      margin: 4px 2px;
+      border-radius: 50%;
+    }
+
+    .fa:hover {
+      color: orange;
+    }
+
+    .fa-facebook,.fa-google{
+      color: rgba(83, 84, 83, 0.6);
+      margin-right: 14px;
+    }
+  }
+  
+
+
+}

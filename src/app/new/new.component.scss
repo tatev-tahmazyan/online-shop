@@ -1,0 +1,44 @@
+@mixin displayflex($display,$flexDirection,$justifyContent,$alignItems){
+  display: $display;
+  flex-direction: $flexDirection;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+@mixin img($width,$height,$objectFit){
+  width: $width;
+  height: $height;
+  object-fit: $objectFit;
+}
+
+.material-icons{
+  cursor: pointer;
+  color: silver;
+}
+
+.material-icons:hover{
+  color: black;
+  
+}
+
+.app-new{
+	margin-top: 90px; 
+
+	.app-new-shop-list{
+		@include displayflex(flex,row,space-around,center);
+		margin-bottom: 40px;
+
+  .app-new-shop-list__item{
+    margin-right: 20px;
+  }
+
+  .app-new-shop-list__img{
+    @include img(300px,500px,cover);
+  }
+
+  .app-new-shop-list__price{
+    font-family: serif;
+    text-align: left;
+  }
+}
+}

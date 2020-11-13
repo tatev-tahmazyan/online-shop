@@ -1,0 +1,78 @@
+*{
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.app-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  z-index: 9;
+  background-color: white;
+}
+
+.app-header-title-container{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 60px;
+
+	.app-header-title-container__logo{
+    cursor: pointer;
+    max-width: 180px;
+	  max-height: 70px;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+	  font-size: 50px;
+	  letter-spacing: 3px;
+	  text-decoration: none;
+    color: #3f3f3f;
+	}
+
+	.app-header__container{
+		display: flex;
+		flex-direction: row;
+    justify-content: space-between;
+		align-items: center;
+    cursor: pointer;
+	}	
+}
+
+.app-header-menu-container{
+  display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: start;
+	margin: 0 60px;
+
+	.app-header-menu-container__link{
+		margin-right: 12px;
+		padding: 3px;
+		line-height: 1.2;
+		font: inherit;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: #585858;
+    cursor: pointer;
+    transition: border-bottom linear infinite;
+
+	}
+	.app-header-menu-container__link:hover{
+    border-bottom: 2px solid black;
+    color: #987C62;
+  }
+
+}
+.material-icons{
+	margin-right: 10px;
+}
+
+
+
+
+

@@ -1,0 +1,29 @@
+<div class="app-login">
+<form>
+	<div class="app-login__title">Login</div>
+
+	<label for="mail" class="app-login__label">
+		Username or Email
+	</label>
+	<input id='mail' type="text" class="app-login__input" placeholder="Enter your username or email" [(ngModel)]="username" [value]="username" required>
+
+	<label for="password" class="app-login__label">
+	  Password
+	</label>
+	<input id="password" type="password" class="app-login__input" placeholder="Enter your password" [(ngModel)]="password" [value]="password" required>
+
+	<button class="app-login-button" (click)="login()">Login</button>
+
+	<input type="checkbox" name="remember" id="remember">
+	<label for="remember" class="app-login__checkbox">Remember me</label>
+
+	<div class="app-login__other">Or login with</div>
+
+  <div class="app-login__link-container">
+  	<a href="https://www.facebook.com/" target="blank" class="fa fa-facebook"></a>
+	  <a href="https://www.google.ru/" target="blank" class="fa fa-google"></a>
+  </div>
+</form>
+</div>
+
+
