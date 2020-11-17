@@ -1,20 +1,20 @@
 <div class="app-home">
 
-  <div class="app-home-new-animation-container">
-    <div class="app-home-new-animation__img-parent">   
+  <div class="app-home-animation-container">
+    <div class="app-home-animation__img-parent">   
     </div>
-    <span class="app-home-new-animation__context">
-      <span class="app-home-new-animation__title">FW new
+    <span class="app-home-animation__context">
+      <span class="app-home-animation__title">FW new
       </span><br>
-      <span class="app-home-new-animation__sub-title">Fashion coat
+      <span class="app-home-animation__sub-title">Fashion coat
       </span><br>
     </span>
-    <div class="app-home-new-animation__img-child">   
+    <div class="app-home-animation__img-child">   
     </div>
   </div>
 
 
-  <div class="app-home-new-collection__context">New Collection</div>
+  <!-- <div class="app-home-new-collection__context">New Collection</div> -->
   <div class="app-home-new-collection-container">
     <div *ngFor="let new of newCollectionList; let i = index;" class ="app-home-new-collection__item app-home-new-collection__item-{{i}}">
       <div *ngIf="!new.wishlist">

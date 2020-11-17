@@ -37,6 +37,10 @@ export class UserComponent implements OnInit {
     { id: 2,src: "../../assets/user-images/clothing/s2.jpg",heart: "favorite_border",wishlist: false},
   ];
 
+  showWishlist(){
+    
+  }
+
 
   
 }

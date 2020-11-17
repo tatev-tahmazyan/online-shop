@@ -12,13 +12,14 @@
 }
 
 .material-icons{
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 6px;
+	padding: 3px;
   cursor: pointer;
   color: silver;
-}
-
-.material-icons:hover{
-  color: black;
-  
 }
 
 .app-new{
@@ -28,17 +29,18 @@
 		@include displayflex(flex,row,space-around,center);
 		margin-bottom: 40px;
 
-  .app-new-shop-list__item{
-    margin-right: 20px;
-  }
 
-  .app-new-shop-list__img{
-    @include img(300px,500px,cover);
-  }
+		.app-new-shop-list__item{
+			position: relative;
+		}
 
-  .app-new-shop-list__price{
-    font-family: serif;
-    text-align: left;
+    .app-new-shop-list__img{
+      @include img(300px,480px,cover);
+    }
+
+    .app-new-shop-list__price{
+      font-family: serif;
+      text-align: left;
+    }
   }
-}
 }

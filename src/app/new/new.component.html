@@ -1,26 +1,31 @@
 <div class="app-new">
 	<div class="app-new-shop-list">
     <div *ngFor="let shop of shopList1; let i = index;" class ="app-new-shop-list__item app-new-shop-list__item-{{i}}">
-      <div *ngIf="!shop.wishlist">
+      <div *ngIf="!shop.wishlist" (mouseenter) = "isHover()" (mouseleave) = "isNotHover()">
         <img src="{{shop.src}}" class="app-new-shop-list__img">
-        <span class="material-icons" title="Add to wishlist" (click)="showWishlist()">
+      </div>
+      <div>
+        <span class="material-icons" title="Add to wishlist" id="favorite" (mouseenter) = "isHover()" (mouseleave) = "isNotHover()" (click)="click()">
             {{shop.heart}}
         </span>
-        <div class="app-new-shop-list__price">{{shop.price}}</div>
       </div>
+        <div class="app-new-shop-list__price">{{shop.price}}</div>      
     </div>
   </div>
 
+  
 
   <div class="app-new-shop-list">
     <div *ngFor="let shop of shopList2; let i = index;" class ="app-new-shop-list__item app-new-shop-list__item-{{i}}">
-      <div *ngIf="!shop.wishlist">
+      <div *ngIf="!shop.wishlist"  (mouseenter) = "isHover()" (mouseleave) = "isNotHover()">
         <img src="{{shop.src}}" class="app-new-shop-list__img">
-        <span class="material-icons" title="Add to wishlist" (click)="showWishlist()">
+      </div>
+      <div>
+        <span class="material-icons" title="Add to wishlist"  id="favorite" (mouseenter) = "isHover()" (mouseleave) = "isNotHover()" (click)="click()">
             {{shop.heart}}
         </span>
-        <div class="app-new-shop-list__price">{{shop.price}}</div>
       </div>
+        <div class="app-new-shop-list__price">{{shop.price}}</div>
     </div>
   </div>
 </div>

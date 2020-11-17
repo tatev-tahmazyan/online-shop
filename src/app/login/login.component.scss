@@ -1,10 +1,15 @@
 $color: orange;
 
+
 .app-login{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin: 10px 0;
+
+  app-login-container{
+    width: 100%;
+  }
 
 	.app-login__title{
 		display: block;
