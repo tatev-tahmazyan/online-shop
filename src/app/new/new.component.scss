@@ -11,36 +11,53 @@
   object-fit: $objectFit;
 }
 
-.material-icons{
-	display: none;
-	position: absolute;
-	right: 0;
-	top: 0;
-	margin: 6px;
-	padding: 3px;
-  cursor: pointer;
-  color: silver;
-}
-
 .app-new{
 	margin-top: 90px; 
 
-	.app-new-shop-list{
+	.app-new-collection-list{
 		@include displayflex(flex,row,space-around,center);
+    flex-wrap: wrap;
 		margin-bottom: 40px;
 
 
-		.app-new-shop-list__item{
+    .app-new-collection-list__heart{
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin: 6px;
+      padding: 3px;
+      cursor: pointer;
+      color: silver;
+      opacity: 0;
+      transition: 0.25s linear all;
+}
+
+
+		.app-new-collection-list__item{
 			position: relative;
+      margin-bottom: 30px;
+
+      &:hover {
+        .app-new-collection-list__heart {
+          opacity: 1;
+          background-color: white;
+
+          &:hover {
+            color: black;
+          }
+
+          &--selected {
+            color: red;
+          }
+        }
+      }
 		}
 
-    .app-new-shop-list__img{
+    .app-new-collection-list__img{
       @include img(300px,480px,cover);
-    }
-
-    .app-new-shop-list__price{
-      font-family: serif;
-      text-align: left;
     }
   }
 }
+
+
+

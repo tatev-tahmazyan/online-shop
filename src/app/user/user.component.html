@@ -14,16 +14,12 @@
   </div>
 
 
-  <!-- <div class="app-home-new-collection__context">New Collection</div> -->
   <div class="app-home-new-collection-container">
     <div *ngFor="let new of newCollectionList; let i = index;" class ="app-home-new-collection__item app-home-new-collection__item-{{i}}">
-      <div *ngIf="!new.wishlist">
-        <img src="{{new.src}}" class="app-home-new-collection__img">
-        <span class="material-icons" title="Add to wishlist" (click)="showWishlist()">
-          {{new.heart}}
-        </span>
-      </div>  
+
+      <img src="{{new.src}}" class="app-home-new-collection__img">
     </div>
+    <p class="app-home-new-collection__context">New Collection</p>
   </div>
 
 
@@ -31,12 +27,7 @@
   <div class="app-home-trend-container">
     <div class="app-home-trend-list">
       <div *ngFor="let trend of trendList; let i = index;" class ="app-home-trend-list__item app-home-trend-list__item-{{i}}">
-        <div *ngIf="!trend.wishlist">
           <img src="{{trend.src}}" class="app-home-trend-list__img">
-          <span class="material-icons" title="Add to wishlist" (click)="showWishlist()">
-            {{trend.heart}}
-          </span>
-        </div>
 
       </div>
     </div>
@@ -49,13 +40,27 @@
 
   <div class="app-home-shop-list">
     <div *ngFor="let shop of shopList; let i = index;" class ="app-home-shop-list__item app-home-shop-list__item-{{i}}">
-      <div *ngIf="!shop.wishlist">
+
         <img src="{{shop.src}}" class="app-home-shop-list__img">
-        <span class="material-icons" title="Add to wishlist" (click)="showWishlist()">
+
+        <span [ngClass]="{'app-home-favorite--selected': shop.wishlist}" class="app-home-favorite material-icons" title="Add to wishlist" (click)="addToWishlist(shop)">
             {{shop.heart}}
         </span>
-        <div class="app-home-shop-list__price">{{shop.price}}</div>
-      </div>
+
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Price
+              </mat-panel-title>
+              <mat-panel-description>
+                {{shop.price}} 
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>{{shop.context}}</p>
+          </mat-expansion-panel>
+        </mat-accordion>
     </div>
   </div>
 
@@ -63,12 +68,8 @@
   <div class="app-home-wanted-clothing-container">
     <div class="app-home-wanted-list">
       <div *ngFor="let wanted of wantedList; let i = index;" class ="app-home-wanted-list__item app-home-wanted-list__item-{{i}}">
-        <div *ngIf="!wanted.wishlist">
-          <img src="{{wanted.src}}" class="app-home-wanted-list__img">
-          <span class="material-icons" title="Add to wishlist" (click)="showWishlist()">
-            {{wanted.heart}}
-          </span>
-        </div>
+
+        <img src="{{wanted.src}}" class="app-home-wanted-list__img">
 
       </div>
     </div>
