@@ -11,16 +11,16 @@
   object-fit: $objectFit;
 }
 
-.app-new{
+.app-clothing{
 	margin-top: 90px; 
 
-	.app-new-collection-list{
+	.app-clothing-list{
 		@include displayflex(flex,row,center,flex-start);
     flex-wrap: wrap;
 		margin-bottom: 40px;
 
 
-    .app-new-collection-list__heart{
+    .app-clothing-list__heart{
       position: absolute;
       right: 0;
       top: 0;
@@ -33,12 +33,12 @@
 }
 
 
-		.app-new-collection-list__item{
+		.app-clothing-list__item{
 			position: relative;
       margin: 0 10px 30px 10px;
 
       &:hover {
-        .app-new-collection-list__heart {
+        .app-clothing-list__heart {
           opacity: 1;
           background-color: white;
 
@@ -53,11 +53,8 @@
       }
 		}
 
-    .app-new-collection-list__img{
+    .app-clothing-list__img{
       @include img(300px,480px,cover);
     }
   }
 }
-
-
-

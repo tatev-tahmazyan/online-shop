@@ -1,0 +1,31 @@
+<div class="app-clothing">
+	
+  <div class="app-clothing-list">
+    <div *ngFor="let clothingListItem of clothingList; let i = index;" class ="app-clothing-list__item app-clothing-collection-list__item-{{i}}">
+
+        <img src="{{clothingListItem.src}}" class="app-clothing-list__img">
+
+        <span [ngClass]="{'app-clothing-list__heart--selected': clothingListItem.wishlist}" class="app-clothing-list__heart material-icons" title="Add to wishlist" (click)="addToWishList(clothingListItem)">
+            {{clothingListItem.heart}}
+        </span>
+
+        <mat-accordion>
+        	<mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+            	<mat-panel-title>
+            		Price
+              </mat-panel-title>
+              <mat-panel-description>
+              	{{clothingListItem.price}} 
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>{{clothingListItem.context}}</p>
+          </mat-expansion-panel>
+        </mat-accordion>
+    
+    </div>
+  </div>
+
+</div>
+

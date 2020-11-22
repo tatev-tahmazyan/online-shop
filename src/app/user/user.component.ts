@@ -44,8 +44,31 @@ export class UserComponent implements OnInit {
     console.log(item);
     this.selectedItems.push(item);
     console.log("Favorite :"+this.selectedItems);
-
   }
 
+  
+// let slideIndex: number = 1;
+// showSlides(slideIndex);
+
+// plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
+
+// public img = '';
+// showSlides(n) {
+//   let i: number = 0;
+//   if (n > this.img.length) {
+//     slideIndex = 1;
+//   }    
+//   if (n < 1) {
+//     slideIndex = this.img.length;
+//   }
+//   for (i = 0; i < this.img.length; i++) {
+//       this.img[i].style.display = "none";  
+//   }
+  
+//   this.img[slideIndex-1].style.display = "block";  
+
+// }
   
 }

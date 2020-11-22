@@ -44,6 +44,13 @@
 }
 
 
+
+.app-home-slideshow__item{
+  display: none;
+  
+}
+
+
 .app-home-new-collection-container {
   @include displayflex(flex,row,space-between,center);
   margin: 10px 0;
@@ -110,7 +117,7 @@
 }
 
 .app-home-shop-list{
-  @include displayflex(flex,row,space-around,center);
+  @include displayflex(flex,row,space-around,flex-start);
 
 
   .app-home-favorite{
