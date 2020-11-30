@@ -9,6 +9,10 @@
             {{clothingListItem.heart}}
         </span>
 
+        <span class="app-clothing-list__new-item" *ngIf="clothingListItem.new">
+        	New
+        </span>
+
         <mat-accordion>
         	<mat-expansion-panel (opened)="panelOpenState = true"
                        (closed)="panelOpenState = false">

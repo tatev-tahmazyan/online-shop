@@ -45,12 +45,6 @@
 
 
 
-.app-home-slideshow__item{
-  display: none;
-  
-}
-
-
 .app-home-new-collection-container {
   @include displayflex(flex,row,space-between,center);
   margin: 10px 0;

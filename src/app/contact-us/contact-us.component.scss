@@ -1,73 +1,96 @@
 .app-contact-us{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
-	margin-top:90px;
+  margin-top: 90px;
+  background: linear-gradient(-45deg, #BAADA3, #CAA384, #F1A264);
+  background-size: 400% 400%;
+  animation: background-gradient 5s ease infinite;
 
+	
 	.app-contact-us-container{
-		margin-top:50px;
+		 display: flex;
+		 flex-direction: row;
+		 justify-content: center;
+		 margin: 0 30px;
 	}
-
-	.app-contact-us__sub-title{
-		text-align: left;
-		font-size: 20px;
-		font-family: serif;
-		text-transform: capitalize;
-	}
-
 
 	.app-contact-us-form{
-		margin-top:20px;
-		padding: 8px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 500px;
 
 		.app-contact-us__input{
-			display: block;
-			margin: 4px 0 8px 0;
-			padding: 8px 2px;
-			width: 300px;
-			background-color: #E3E1DD;
-			border: none;
+			width: 100%;
 			color: #424141;
 		}
 		.app-contact-us__label{
-			margin: 2px 0;
-			font-weight: 600;
 			font-size: 13px;
-			font-family: serif;
+			font-family: 'Mukta', sans-serif;
 			text-transform: uppercase;
-		}
-
-		.app-contact-us__label--required:after{
-			content: "*";
-			color: red;	
+			color: black;
 		}
 
 		.app-contact-us__send-message{
 			display: block;
 			margin: 20px 0 ;
 			padding: 8px 0;
-			width: 300px;
+			width: 500px;
 			border:none;
 			font-size: 20px;
 			font-family: serif;
-			background-color: black;
-			color: white;
+			color: #836044;
+			cursor: pointer;
 
-			&:hover{
-				color: #C69F7F;
+			&:active {
+				transform: translateY(2px);
 			}
+		}
+	}
 
+	.app-contact-us-info{
+		margin-left: 14px;
+		padding: 10px 100px;
+		font-family: 'Noto Sans JP', sans-serif;
+
+		.app-contact-us-info__sub-title{
+			display: block;
+			margin: 8px;
+			padding: 0 15px; 
+			font-size: 40px;
+			text-transform: capitalize;
+			text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
 		}
 
+		.app-contact-us-info__context{
+			margin: 8px;
+			padding: 0 15px;
+			font-size: 20px;	
+		}
 
+		.app-contact-us-info__context-email{
+			color: black;
+		}
 	}
 
-	.app-contact-us__location{
-		margin: 10px 0;
-		width: 600px;
-		height: 250px;
-		border:0;
-	}
+	.app-contact-us__location-container{
+		display: flex;
+		justify-content: center;
 
+		.app-contact-us__location{
+			width: 800px;
+			height: 150px;
+		}
+	}
+}
+
+@keyframes background-gradient {
+  0% {
+    background-position: 0% 50%;
+
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

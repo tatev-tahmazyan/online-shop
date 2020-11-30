@@ -12,11 +12,8 @@ import { BodyComponent } from './body/body.component';
 import {FormsModule} from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
-import { NewComponent } from './new/new.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ClothingComponent } from './clothing/clothing.component';
-
-
 
 @NgModule({
   declarations: [
@@ -26,7 +23,6 @@ import { ClothingComponent } from './clothing/clothing.component';
     BodyComponent,
     AdminComponent,
     UserComponent,
-    NewComponent,
     ContactUsComponent,
     ClothingComponent,
     
