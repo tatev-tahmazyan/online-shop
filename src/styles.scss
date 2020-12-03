@@ -2,18 +2,18 @@
 
 
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { margin: 0; height: 100%; font-family: Roboto, "Helvetica Neue", sans-serif; overflow: hidden;}
 
 ::-webkit-scrollbar {
   width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #987C62; 
+  background: #987C62;
   border-radius: 10px;
 }

@@ -39,26 +39,30 @@ export class UserComponent implements OnInit {
     { id : 3, src : '../../assets/user-images/clothing/s5.jpg'},
   ];
 
+  public selectedItems: Array<any> = [];
 
-  plusDivs(item : any){
-    
-  }
-
-
-  public selectedItems: Array<any> =[];
-  
-  addToWishList(item: any) {
-    item.wishlist = true;
-    console.log(item);
-    this.selectedItems.push(item);
-    console.log("Favorite :"+this.selectedItems);
-  }
-
+  public currentItemId = 0;
 
  constructor() { }
 
   ngOnInit(): void {
   }
 
-  
+  plusDivs(tmp: number): void{
+    this.currentItemId += tmp;
+
+    if(this.currentItemId === 4){
+      this.currentItemId = 0;
+    }
+    if(this.currentItemId === -1){
+      this.currentItemId = 3;
+    }
+  }
+
+  addToWishList(item: any): void {
+    item.wishlist = true;
+    console.log(item);
+    this.selectedItems.push(item);
+    console.log('Favorite :' + this.selectedItems);
+  }
 }

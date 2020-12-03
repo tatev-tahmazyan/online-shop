@@ -1,7 +1,7 @@
 <div class="app-home">
 
   <div class="app-home-animation-container">
-    <div class="app-home-animation__img-parent">   
+    <div class="app-home-animation__img-parent">
     </div>
     <span class="app-home-animation__context">
       <span class="app-home-animation__title">FW new
@@ -9,24 +9,24 @@
       <span class="app-home-animation__sub-title">Fashion coat
       </span><br>
     </span>
-    <div class="app-home-animation__img-child">   
+    <div class="app-home-animation__img-child">
     </div>
   </div>
 
 
-  
-    <div class="app-home-slideshow">
-      <div class="app-home-slideshow-container">
-
+    <div class="app-home-slideshow-container">
         <div *ngFor="let slideShowItem of slideShowItems; let i = index;" class ="app-home-slideshow__item app-home-slideshow__item-{{i}}">
-          <img src="{{slideShowItem.src}" class="app-home-slideshow__img">
-        </div>
-
+          <ng-container *ngIf="slideShowItem.id === currentItemId">
+            <img src="{{slideShowItem.src}}" class="app-home-slideshow__img">
+          </ng-container>
       </div>
 
-      <button class="button display-right" (click)="plusDivs(1)">&#10094;</button>
-      <button class="button display-left" (click)="plusDivs(-1)">&#10095;</button>
-    </div> 
+
+      <button mat-raised-button class="app-home-slideshow__button-left" (click)="plusDivs(-1)">&#10094;</button>
+
+      <button mat-raised-button class="app-home-slideshow__button-right" (click)="plusDivs(1)">&#10095;</button>
+
+    </div>
 
 
 
@@ -71,7 +71,7 @@
                 Price
               </mat-panel-title>
               <mat-panel-description>
-                {{shop.price}} 
+                {{shop.price}}
               </mat-panel-description>
             </mat-expansion-panel-header>
             <p>{{shop.context}}</p>

@@ -11,33 +11,24 @@
   object-fit: $objectFit;
 }
 
-.app-clothing{
+.app-shoes{
 	margin-top: 90px;
   overflow: auto;
   height: 100%;
 }
 
-.app-clothing-list{
+.app-shoes-list{
   @include displayflex(flex,row,flex-start,flex-start);
   flex-wrap: wrap;
   width: 85%;
   margin: 0 auto;
 
-  .app-clothing__filter-container{
-    width: 150px;
-    text-align: center;
-    cursor: pointer;
-  }
-  .app-clothing__filter:hover{
-    color: black;
-  }
-
-  .app-clothing-list__item{
+  .app-shoes-list__item{
     position: relative;
     margin: 0 10px 30px 10px;
 
     &:hover {
-      .app-clothing-list__heart {
+      .app-shoes-list__heart {
         opacity: 1;
         background-color: white;
 
@@ -52,7 +43,7 @@
     }
   }
 
-  .app-clothing-list__heart{
+  .app-shoes-list__heart{
     position: absolute;
     right: 0;
     top: 0;
@@ -64,7 +55,7 @@
     transition: 0.25s linear all;
   }
 
-  .app-clothing-list__new-item{
+  .app-shoes-list__new-item{
     position: absolute;
     left: 0;
     top:20px;
@@ -75,7 +66,7 @@
     background-color: rgb(173 138 41 / 48%);
   }
 
-  .app-clothing-list__img{
+  .app-shoes-list__img{
     @include img(300px,480px,cover);
   }
 }

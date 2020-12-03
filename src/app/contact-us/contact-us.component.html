@@ -1,31 +1,33 @@
 <div class="app-contact-us">
 
 	<span class="app-contact-us-container">
-		<form class="app-contact-us-form">
+		<mat-card class="app-contact-us-card-container">
+		<form class="app-contact-us-form" name="form">
 				<mat-form-field appearance="fill">
 					<mat-label class="app-contact-us__label">First name</mat-label>
-					<input type="text" class="app-contact-us__input" required matInput placeholder="Your first name">
+					<input type="text" [(ngModel)]='name' [value]='name' class="app-contact-us__input" required matInput placeholder="Your first name">
 				</mat-form-field>
-	
+
 				<mat-form-field appearance="fill">
 					<mat-label type="text" class="app-contact-us__label">Last name</mat-label>
 					<input class="app-contact-us__input" required matInput placeholder="Your last name">
 				</mat-form-field>
-	
+
 				<mat-form-field appearance="fill">
 					<mat-label type="email" class="app-contact-us__label">Email</mat-label>
-					<input class="app-contact-us__input" required matInput placeholder="Your email address">
+					<input class="app-contact-us__input" required matInput [(ngModel)]='email' [value]='email' placeholder="Your email address">
 				</mat-form-field>
-		
+
 				<mat-form-field appearance="fill">
 					<mat-label class="app-contact-us__label">Message</mat-label>
 					<input class="app-contact-us__input" required matInput placeholder="Ex. I need help with...">
 				</mat-form-field>
-			
-			<button class="app-contact-us__send-message" mat-raised-button>Send Message</button>
-			
+
+			<button type="submit" class="app-contact-us__send-message" mat-raised-button  (click)="sendData()" form="form">Send Message</button>
+
 		</form>
-	
+	</mat-card>
+
 
 	<span class="app-contact-us-info">
 		<span class="app-contact-us-info__sub-title">need more help?</span>
@@ -34,7 +36,7 @@
 	</span>
 
 	<span class="app-contact-us__location-container">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1524.100205464017!2d44.512569829349715!3d40.18235317389264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbfcfb0e6d9063107!2sBoutique%20Fashion!5e0!3m2!1sru!2s!4v1605799788981!5m2!1sru!2s" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0" class="app-contact-us__location">			
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1524.100205464017!2d44.512569829349715!3d40.18235317389264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbfcfb0e6d9063107!2sBoutique%20Fashion!5e0!3m2!1sru!2s!4v1605799788981!5m2!1sru!2s" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0" class="app-contact-us__location">
 		</iframe>
 	</span>
 

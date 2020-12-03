@@ -14,6 +14,7 @@ import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { ClothingComponent } from './clothing/clothing.component';
+import { ShoesComponent } from './shoes/shoes.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ClothingComponent } from './clothing/clothing.component';
     UserComponent,
     ContactUsComponent,
     ClothingComponent,
+    ShoesComponent,
     
   ],
   imports: [
