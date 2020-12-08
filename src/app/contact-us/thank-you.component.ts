@@ -1,21 +1,18 @@
-// import { Component, OnInit } from '@angular/core';
-// import {MatDialog} from '@angular/material/dialog';
+import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
 
-// @Component({
-//   selector: 'app-contact-us',
-//   template: `<h1 mat-dialog-title style="color:pink;">Thank You Dear {{data.name}}</h1>
-//   <div mat-dialog-actions>
-//   <button mat-button (click)="onNoClick()">Close</button>
-// </div>`,
-// })
-// export class ThankYouComponent implements OnInit {
+@Component({
+  selector: 'app-contact-us',
+  template: `<h1 mat-dialog-title style="color:pink;">Thank You</h1>`,
+})
+export class ThankYouComponent implements OnInit {
 
-//   constructor() {}
+  constructor() {}
 
-//   ngOnInit(): void {
-//   }
+  ngOnInit(): void {
+  }
 
-//   onNoClick(): void {
-//     this.dialogRef.close();
-//   }
-// }
+  onNoClick(): void {
+    // this.dialogRef.close();
+  }
+}

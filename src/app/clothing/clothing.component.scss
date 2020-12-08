@@ -12,29 +12,47 @@
 }
 
 .app-clothing{
+  display: flex;
 	margin-top: 90px;
   overflow: auto;
   height: 100%;
 }
 
+  .app-clothing__price-filter-container{
+    position: fixed;
+    height: 100%;
+    width: 13%;
+    margin: 0 10px 0 0;
+    padding: 20px;
+    z-index: 19;
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 10px 10px -5px;
+  }
+
+  .app-clothing__price-filter-item{
+    padding: 2px;
+
+    &:hover{
+      font-size: 17px;
+    }
+  }
+
+  .app-clothing__price-filter-title{
+    font-weight: 600;
+    font-size: 15px;
+  }
+
 .app-clothing-list{
   @include displayflex(flex,row,flex-start,flex-start);
   flex-wrap: wrap;
-  width: 85%;
-  margin: 0 auto;
-
-  .app-clothing__filter-container{
-    width: 150px;
-    text-align: center;
-    cursor: pointer;
-  }
-  .app-clothing__filter:hover{
-    color: black;
-  }
+  width: 100%;
+  margin: 0 0 0 250px;
 
   .app-clothing-list__item{
     position: relative;
-    margin: 0 10px 30px 10px;
+    margin: 0 10px 30px 20px;
 
     &:hover {
       .app-clothing-list__heart {
